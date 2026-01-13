@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Semafoor</title>
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="/styles/semafoor.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"
+    ></script>
+
+    <script type="module" src="/script/semafoor.js"></script>
+  </head>
+  <body>
+    <div class="container" data-status="loading">
+      <canvas></canvas>
+      <p id="letterbox"></p>
+      <p class="previous"></p>
+    </div>
+    <div class="display">
+      <p class="interactie"></p>
+    </div>
+    <div class="eye1"></div>
+    <div class="eye1pupil"></div>
+    <div class="eye2"></div>
+    <div class="eye2pupil"></div>
+
+    <div class="ogenlinks">
+      <img id="ogenImg" src="images/ogenlinks.png" alt="ogen" />
+    </div>
+  </body>
+</html>

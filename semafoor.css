@@ -1,0 +1,94 @@
+/* States */
+
+.container[data-status] {
+  position: absolute;
+  left: 290px;
+  top: 210px;
+  --container-height: 400px;
+  container-type: size;
+
+  height: var(--container-height);
+  display: flex;
+
+  canvas {
+    background: rgb(121, 100, 63);
+
+    background-size: 100% 200%;
+    animation: shimmer 1s infinite linear;
+    width: var(--container-height);
+    aspect-ratio: 1/1;
+
+    display: block;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  p {
+    font-size: clamp(1rem, 25vw, 50cqw);
+    line-height: 1;
+
+    &:last-of-type {
+      opacity: 0.5;
+    }
+  }
+}
+
+.display {
+  .interactie {
+    overflow-y: hidden;
+    overflow-y: clip;
+    width: 300px;
+    font-size: clamp(1rem, 10vw, 100vw);
+
+    span {
+      font-size: inherit;
+      transition: color 0.2s ease-in;
+      color: inherit;
+
+      &:last-of-type {
+        display: inline-block;
+        transform: translateY(-100%);
+        animation: slide-in 0.2s ease-out forwards;
+      }
+    }
+  }
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
+    color: var(--accent);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0 -100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.state-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.letter-img {
+  height: 200px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* ===== INTERACTIE AFBEELDING FIX ===== */
+
+.display .interactie {
+  width: 600px; /* groter tekstvak */
+}
+
+.display .interactie img {
+  width: 100%; /* afbeelding vult de breedte */
+  height: auto; /* verhoudingen blijven goed */
+  display: block;
+}

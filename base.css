@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* Primary Yellow */
+  --primary: rgb(116, 96, 61);
+  --primary-dark: #e8c84a;
+  --primary-darker: #d4b038;
+
+  /* Secondary Brown */
+  --secondary: #ff00bb;
+  --secondary-light: #ff00bb;
+  --secondary-dark: #ff00bb;
+
+  /* Accent Orange */
+  --accent: #ff00bb;
+  --accent-light: #ff00bb;
+  --accent-dark: #ff00bb;
+
+  /* Neutral */
+  --neutral: #ffffff;
+  --neutral-light: #fff8e7;
+  --neutral-dark: #f5e6c8;
+
+  color: var(--secondary-dark);
+  background: var(--primary);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 5rem);
+}
+
+/*.eye2 {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  left: 900px;
+  top: 200px;
+  background-color: black;
+}
+
+.eye2pupil {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  left: 900px;
+  top: 200px;
+  background-color: rgb(255, 255, 255);
+}
+.eye1 {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  left: 300px;
+  top: 200px;
+  background-color: black;
+}
+
+.eye1pupil {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  left: 300px;
+  top: 200px;
+  background-color: rgb(255, 255, 255);
+}*/
+
+.interactie {
+  position: absolute;
+  left: 450px;
+  top: -120px;
+}
+
+#ogenImg {
+  position: absolute;
+  z-index: 300;
+  top: -50px;
+  left: 100px;
+  width: 1300px;
+  height: auto;
+
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
